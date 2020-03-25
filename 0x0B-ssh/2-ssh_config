@@ -1,0 +1,12 @@
+### default for all ##
+Host *
+     PasswordAuthentication no
+     SendEnv LANG LC_*
+     HashKnownHosts yes
+     GSSAPIAuthentication yes
+
+## me server ##
+Host me
+     HostName 107.23.192.151
+     User ubuntu
+     IdentityFile ~/.ssh/holberton
