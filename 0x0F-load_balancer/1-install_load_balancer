@@ -2,5 +2,5 @@
 # Bash script that configures HAproxy on server
 sudo apt-get -y update
 sudo apt-get -y install haproxy=1.6.\*
-sudo sed -i '$ a\\nlisten http-in\n\tbind *:80\n\tmode http\n\tbalance roundrobin\n\tserver 1209-web-01 35.237.146.194:80\n\tserver 1209-web-02 35.243.176.223:80' /etc/haproxy/haproxy.cfg
+sudo sed -i '$ a\\nlisten http-in\n\tbind *:80\n\tmode http\n\tbalance roundrobin\n\tserver 1209-web-01 35.237.146.194:80 check\n\tserver 1209-web-02 35.243.176.223:80 check' /etc/haproxy/haproxy.cfg
 sudo systemctl start haproxy.service
