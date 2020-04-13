@@ -3,4 +3,4 @@
 sudo apt-get -y update
 sudo apt-get -y install haproxy=1.6.\*
 sudo sed -i '$ a\\nfrontend front_http\n\tbind *:80\n\tmode http\n\tdefault_backend back\n\backend back\n\tbalance roundrobin\n\tserver 1209-web-01 35.237.146.194:80 check\n\tserver 1209-web-02 35.243.176.223:80 check' /etc/haproxy/haproxy.cfg
-sudo systemctl start haproxy.service
+sudo service haproxy start
