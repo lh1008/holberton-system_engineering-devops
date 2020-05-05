@@ -29,7 +29,7 @@ def main():
                                                           count, task_len))
     for t in task_res:
         if t['completed'] is True:
-            print(t['title'])
+            print('\t{}'.format(t['title']))
 
 if __name__ == "__main__":
     main()
