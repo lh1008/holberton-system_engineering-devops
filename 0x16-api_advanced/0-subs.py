@@ -11,10 +11,12 @@ def number_of_subscribers(subreddit):
     req = requests.get(url,
                        headers={'User-Agent': 'me'},
                        allow_redirects=False)
-    if subreddit is False:
+
+    if req.status_code == 404:
         return(0)
-    info = req.json()
-    return(info['data']['children'][0]['data']['subreddit_subscribers'])
+    else:
+        info = req.json()
+        return(info['data']['children'][0]['data']['subreddit_subscribers'])
 
 if __name__ == '__main__':
     number_of_subscribers()
