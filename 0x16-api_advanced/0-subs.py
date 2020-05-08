@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ Module that queries the Reddit API """
 import requests
-from collections import OrderedDict
 
 
 def number_of_subscribers(subreddit):
@@ -17,6 +16,3 @@ def number_of_subscribers(subreddit):
     else:
         info = req.json()
         return(info['data']['children'][0]['data']['subreddit_subscribers'])
-
-if __name__ == '__main__':
-    number_of_subscribers()
