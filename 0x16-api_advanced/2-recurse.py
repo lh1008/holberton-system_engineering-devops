@@ -9,7 +9,7 @@ def recurse(subreddit, hot_list=[], after=""):
     if after is None:
         return []
     url = 'https://www.reddit.com/r/{}/hot.json?after={}'.\
-                                                       format(subreddit, after)
+        format(subreddit, after)
 
     req = requests.get(url,
                        headers={'User-Agent': 'me'},
