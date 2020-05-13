@@ -14,11 +14,14 @@ def recurse(subreddit, hot_list=[], after=""):
     req = requests.get(url,
                        headers={'User-Agent': 'me'},
                        allow_redirects=False)
+    info = req.json()
+
+    if info is None:
+        return None
 
     if req.status_code != 200:
-        return(print('None'))
+        return None
     else:
-        info = req.json()
         for value in info.get('data').get('children'):
             hot_list.append(value.get('data').get('title'))
         after = info.get('data').get('after')
