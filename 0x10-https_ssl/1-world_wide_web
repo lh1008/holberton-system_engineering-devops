@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 # Bash script that will display information about subdomains
-#!/usr/bin/env bash
-# Bash script that will display information about subdomains
 func_display () {
     domain="$1"
     subdomain="$2"
