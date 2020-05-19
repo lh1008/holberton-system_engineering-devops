@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """ Module that exports data in the CSV format """
+import csv
 import json
 import requests
 from sys import argv
-import csv
 import urllib.request
 
 
