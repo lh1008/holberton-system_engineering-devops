@@ -24,8 +24,8 @@ def main():
     with open(file_name, 'w', newline='') as file:
         w = csv.writer(file, quoting=csv.QUOTE_ALL)
         for task in todo:
-            w.writerow([int(argv[1]), info.get('name'),
-                task.get('completed'), task.get('title')])
+            w.writerow([int(argv[1]), info.get('username'),
+                        task.get('completed'), task.get('title')])
 
 if __name__ == "__main__":
     main()
