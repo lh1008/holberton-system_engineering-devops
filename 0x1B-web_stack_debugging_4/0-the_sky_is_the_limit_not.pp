@@ -5,5 +5,5 @@ exec { 'Debug failed requests':
 }
 exec { 'nginx service restart':
   command => 'service nginx restart',
-  path    => ['/usr/bin/']
+  path    => ['/usr/bin']
 }
